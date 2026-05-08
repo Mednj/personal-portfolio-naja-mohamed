@@ -125,14 +125,41 @@ export const portfolio = {
     },
     projects: {
       eyebrow: "Projects",
-      title: "Personal systems work in progress.",
+      title: "Personal systems work with production-style architecture.",
       intro:
         "A focused space for engineering projects that demonstrate architecture, debugging, observability, and end-to-end ownership.",
-      featured: "Featured idea",
+      featured: "Featured project",
       projectTitle: "AI Incident & Log Investigation Platform",
       description:
-        "A distributed system for ingesting logs, processing events through Kafka, storing incidents, and helping developers investigate production issues using AI-assisted analysis.",
-      stack: ["Java 17", "Spring Boot", "Kafka", "PostgreSQL", "Angular", "Docker", "Kubernetes"],
+        "A distributed investigation platform that ingests production logs, validates Avro events through Schema Registry, groups failures into incidents, and gives developers an AI-ready workspace for diagnosis.",
+      repoLabel: "View GitHub repository",
+      repoUrl: "https://github.com/Mednj/incident-platform-AI",
+      status: "MVP implemented and runnable locally",
+      stack: [
+        "Java 17",
+        "Spring Boot",
+        "Kafka",
+        "Avro",
+        "Schema Registry",
+        "PostgreSQL",
+        "Angular",
+        "Docker",
+        "Kubernetes",
+      ],
+      metrics: [
+        ["6", "Spring Boot services"],
+        ["6", "Avro Kafka contracts"],
+        ["4", "demo surfaces"],
+      ],
+      highlights: [
+        "Event-driven microservices with Kafka topics for log ingestion, normalization, incident creation, and analysis events.",
+        "Confluent Schema Registry and Avro-generated Java classes to keep producers and consumers contract-driven.",
+        "Deterministic incident grouping using fingerprints built from service, environment, severity, exception class, stack hash, and message pattern.",
+        "PostgreSQL persistence with incident status workflow, comments, assignments, timeline, and AI analysis history.",
+        "Docker Compose demo stack plus Kubernetes manifests for deployment readiness.",
+      ],
+      note:
+        "The local AI analysis uses a deterministic provider for demos, with the service designed around a pluggable external LLM adapter.",
     },
     contact: {
       eyebrow: "Contact",
@@ -253,14 +280,41 @@ export const portfolio = {
     },
     projects: {
       eyebrow: "Projets",
-      title: "Projets personnels en construction.",
+      title: "Projets personnels avec architecture orientee production.",
       intro:
         "Un espace dédié aux projets qui démontrent l'architecture, le debugging, l'observabilité et la capacité à construire un système de bout en bout.",
       featured: "Idée mise en avant",
-      projectTitle: "Plateforme IA d'investigation d'incidents et de logs",
+      projectTitle: "Plateforme d'investigation d'incidents et de logs",
       description:
         "Un système distribué pour ingérer des logs, traiter les événements via Kafka, stocker les incidents et aider les développeurs à investiguer les problèmes de production grâce à une analyse assistée par IA.",
-      stack: ["Java 17", "Spring Boot", "Kafka", "PostgreSQL", "Angular", "Docker", "Kubernetes"],
+      repoLabel: "Voir le depot GitHub",
+      repoUrl: "https://github.com/Mednj/incident-platform-AI",
+      status: "MVP implemente et executable en local",
+      stack: [
+        "Java 17",
+        "Spring Boot",
+        "Kafka",
+        "Avro",
+        "Schema Registry",
+        "PostgreSQL",
+        "Angular",
+        "Docker",
+        "Kubernetes",
+      ],
+      metrics: [
+        ["6", "services Spring Boot"],
+        ["6", "contrats Kafka Avro"],
+        ["4", "surfaces de demo"],
+      ],
+      highlights: [
+        "Microservices evenementiels avec topics Kafka pour ingestion, normalisation, creation d'incidents et evenements d'analyse.",
+        "Confluent Schema Registry et classes Java generees depuis Avro pour fiabiliser les contrats producteurs/consommateurs.",
+        "Groupement deterministe des incidents avec empreinte basee sur service, environnement, severite, exception, stack hash et message.",
+        "Persistance PostgreSQL avec workflow de statut, commentaires, assignations, timeline et historique d'analyses.",
+        "Stack de demonstration Docker Compose et manifests Kubernetes pour la preparation au deploiement.",
+      ],
+      note:
+        "En local, l'analyse utilise un provider deterministe pour la demo, avec une architecture prevue pour brancher un vrai LLM externe.",
     },
     contact: {
       eyebrow: "Contact",

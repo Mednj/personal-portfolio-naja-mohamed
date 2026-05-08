@@ -13,6 +13,10 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import incidentDocker from "../assets/incident-platform-docker.svg";
+import incidentKafka from "../assets/incident-platform-kafka.svg";
+import incidentRegistry from "../assets/incident-platform-registry.svg";
+import incidentUi from "../assets/incident-platform-ui.svg";
 import portrait from "../assets/mohamed-naja-portrait.jpg";
 import { Background } from "../components/Background";
 import { Badge } from "../components/Badge";
@@ -21,6 +25,12 @@ import { Section } from "../components/Section";
 import { education, type Language, portfolio, skills } from "../data/portfolio";
 
 const cvHref = "/Mohamed-NAJA-CV-Alternance-M2-2026.pdf";
+const incidentScreens = [
+  { src: incidentUi, label: "Investigation UI", className: "md:col-span-2" },
+  { src: incidentKafka, label: "Kafka UI", className: "" },
+  { src: incidentRegistry, label: "Schema Registry", className: "" },
+  { src: incidentDocker, label: "Docker stack", className: "md:col-span-2" },
+];
 
 type ContactItem = {
   label: string;
@@ -263,21 +273,76 @@ function Projects({ content }: { content: (typeof portfolio)[Language]["projects
       title={content.title}
       intro={content.intro}
     >
-      <div className="rounded-2xl border border-electric/30 bg-gradient-to-br from-white via-sky-50/90 to-emerald-50/80 p-7 shadow-glow dark:border-mint/25 dark:from-white/[0.08] dark:via-electric/[0.08] dark:to-mint/[0.07]">
-        <div className="flex flex-wrap items-start justify-between gap-5">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">{content.featured}</p>
-            <h3 className="mt-3 text-2xl font-semibold text-slate-950 dark:text-white">{content.projectTitle}</h3>
+      <article className="overflow-hidden rounded-[1.5rem] border border-electric/25 bg-white shadow-glow dark:border-mint/20 dark:bg-white/[0.06]">
+        <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="bg-slate-950 p-5 dark:bg-ink-2 sm:p-6">
+            <div className="grid gap-3 md:grid-cols-2">
+              {incidentScreens.map((screen) => (
+                <figure
+                  key={screen.label}
+                  className={`${screen.className} overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl`}
+                >
+                  <img src={screen.src} alt={`${content.projectTitle} - ${screen.label}`} className="h-full min-h-32 w-full object-cover" />
+                </figure>
+              ))}
+            </div>
           </div>
-          <Github className="text-slate-400" size={26} />
+          <div className="bg-gradient-to-br from-white via-sky-50/90 to-emerald-50/80 p-7 dark:from-white/[0.08] dark:via-electric/[0.08] dark:to-mint/[0.07]">
+            <div className="flex flex-wrap items-start justify-between gap-5">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">{content.featured}</p>
+                <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 dark:text-white">{content.projectTitle}</h3>
+              </div>
+              <a
+                className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-electric dark:bg-white dark:text-ink dark:hover:bg-mint"
+                href={content.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github size={16} />
+                GitHub
+                <ExternalLink size={14} />
+              </a>
+            </div>
+            <p className="mt-3 inline-flex rounded-full border border-electric/20 bg-electric/10 px-3 py-1 text-xs font-semibold text-electric dark:border-mint/20 dark:bg-mint/10 dark:text-mint">
+              {content.status}
+            </p>
+            <p className="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">{content.description}</p>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              {content.metrics.map(([value, label]) => (
+                <div key={label} className="rounded-xl border border-slate-200 bg-white/85 p-4 shadow-sm dark:border-white/10 dark:bg-white/5">
+                  <p className="text-2xl font-semibold text-slate-950 dark:text-white">{value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 space-y-3">
+              {content.highlights.map((highlight) => (
+                <div key={highlight} className="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric dark:bg-mint" />
+                  <span>{highlight}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {content.stack.map((tech) => (
+                <Badge key={tech}>{tech}</Badge>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white/80 p-4 text-sm leading-6 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+              <p>{content.note}</p>
+              <a className="inline-flex shrink-0 items-center gap-2 font-semibold text-electric transition hover:text-slate-950 dark:text-mint dark:hover:text-white" href={content.repoUrl} target="_blank" rel="noreferrer">
+                {content.repoLabel}
+                <ExternalLink size={15} />
+              </a>
+            </div>
+          </div>
         </div>
-        <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-700 dark:text-slate-300">{content.description}</p>
-        <div className="mt-6 flex flex-wrap gap-2">
-          {content.stack.map((tech) => (
-            <Badge key={tech}>{tech}</Badge>
-          ))}
-        </div>
-      </div>
+      </article>
     </Section>
   );
 }
