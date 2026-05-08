@@ -1,5 +1,6 @@
 import {
   ArrowDown,
+  Award,
   BriefcaseBusiness,
   Download,
   ExternalLink,
@@ -22,7 +23,7 @@ import { Background } from "../components/Background";
 import { Badge } from "../components/Badge";
 import { Navbar } from "../components/Navbar";
 import { Section } from "../components/Section";
-import { education, type Language, portfolio, skills } from "../data/portfolio";
+import { certifications, education, type Language, portfolio, skills } from "../data/portfolio";
 
 const cvHref = "/Mohamed-NAJA-CV-Alternance-M2-2026.pdf";
 const incidentScreens = [
@@ -62,6 +63,7 @@ function App() {
         <Experience content={content.experienceIntro} items={content.experience} />
         <Skills content={content.skillsIntro} />
         <Education content={content.educationIntro} language={language} />
+        <Certifications content={content.certificationsIntro} />
         <Projects content={content.projects} />
         <Contact content={content.contact} />
       </main>
@@ -258,6 +260,43 @@ function Education({
             <p className="mt-2 text-slate-700 dark:text-slate-300">{item.school}</p>
             <p className="mt-3 text-sm font-medium text-slate-500 dark:text-slate-400">{item.period}</p>
           </div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function Certifications({ content }: { content: (typeof portfolio)[Language]["certificationsIntro"] }) {
+  return (
+    <Section id="certifications" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+      <div className="grid gap-4 md:grid-cols-2">
+        {certifications.map((certification) => (
+          <a
+            key={certification.title}
+            href={certification.url}
+            target="_blank"
+            rel="noreferrer"
+            className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-sky-50/80 to-emerald-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:border-electric/50 hover:shadow-glow dark:border-white/10 dark:from-white/[0.06] dark:via-electric/[0.06] dark:to-mint/[0.07] dark:hover:border-mint/40"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-electric/20 bg-electric/10 text-electric dark:border-mint/20 dark:bg-mint/10 dark:text-mint">
+                <Award size={22} />
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600 transition group-hover:border-electric group-hover:text-electric dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:group-hover:border-mint dark:group-hover:text-mint">
+                {content.linkLabel}
+                <ExternalLink size={13} />
+              </span>
+            </div>
+            <h3 className="mt-5 text-xl font-semibold leading-7 text-slate-950 dark:text-white">
+              {certification.title}
+            </h3>
+            <p className="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">{certification.issuer}</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {certification.tags.map((tag) => (
+                <Badge key={tag}>{tag}</Badge>
+              ))}
+            </div>
+          </a>
         ))}
       </div>
     </Section>

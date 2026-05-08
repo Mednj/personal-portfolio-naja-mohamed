@@ -6,6 +6,7 @@ export const navItems = {
     { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
     { label: "Education", href: "#education" },
+    { label: "Certifications", href: "#certifications" },
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ],
@@ -14,6 +15,7 @@ export const navItems = {
     { label: "Expérience", href: "#experience" },
     { label: "Compétences", href: "#skills" },
     { label: "Formation", href: "#education" },
+    { label: "Certifications", href: "#certifications" },
     { label: "Projets", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ],
@@ -122,6 +124,13 @@ export const portfolio = {
     educationIntro: {
       eyebrow: "Education",
       title: "Academic foundation aligned with software engineering roles in France.",
+    },
+    certificationsIntro: {
+      eyebrow: "Certifications",
+      title: "Verified training across cloud, microservices, frontend, and professional skills.",
+      intro:
+        "Selected certifications that complement my production experience with structured learning from IBM, Google Cloud, Meta, and Honoris.",
+      linkLabel: "View certificate",
     },
     projects: {
       eyebrow: "Projects",
@@ -278,6 +287,13 @@ export const portfolio = {
       eyebrow: "Formation",
       title: "Formation alignée avec l'alternance et le marché français.",
     },
+    certificationsIntro: {
+      eyebrow: "Certifications",
+      title: "Certifications verifiees en cloud, microservices, frontend et competences professionnelles.",
+      intro:
+        "Une selection de certifications qui complete mon experience production avec des formations IBM, Google Cloud, Meta et Honoris.",
+      linkLabel: "Voir le certificat",
+    },
     projects: {
       eyebrow: "Projets",
       title: "Projets personnels avec architecture orientee production.",
@@ -397,3 +413,30 @@ export const education = {
     },
   ],
 };
+
+export const certifications = [
+  {
+    title: "DevOps, Cloud, and Agile Foundations",
+    issuer: "IBM via Coursera",
+    url: "https://www.coursera.org/account/accomplishments/specialization/EJ4SSDQ52BAE?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n",
+    tags: ["DevOps", "Cloud", "Agile"],
+  },
+  {
+    title: "Building Scalable Java Microservices with Spring Boot and Spring Cloud",
+    issuer: "Google Cloud via Coursera",
+    url: "https://www.coursera.org/account/accomplishments/verify/XUUXL4A4S5XV?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    tags: ["Java", "Spring Boot", "Spring Cloud"],
+  },
+  {
+    title: "Advanced React",
+    issuer: "Meta via Coursera",
+    url: "https://www.coursera.org/account/accomplishments/verify/PHHUKLQKNG8Z",
+    tags: ["React", "Frontend", "Components"],
+  },
+  {
+    title: "Entrepreneurial and Social Skills",
+    issuer: "Honoris",
+    url: "https://certificate.bcdiploma.com/check/82148F819432E0891D68CD0DE933F421DE0D848E41CC22143CC38B94992278D2RStkNUtKbk1oVVJtSDB0SGNYNm9TSmVnWkRCeWlTQjNPcnpkRG5ubk1aUUhaYXBX",
+    tags: ["Entrepreneurship", "Communication", "Leadership"],
+  },
+];
