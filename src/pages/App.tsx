@@ -26,10 +26,9 @@ import { education, type Language, portfolio, skills } from "../data/portfolio";
 
 const cvHref = "/Mohamed-NAJA-CV-Alternance-M2-2026.pdf";
 const incidentScreens = [
-  { src: incidentUi, label: "Investigation UI", className: "md:col-span-2" },
-  { src: incidentKafka, label: "Kafka UI", className: "" },
-  { src: incidentRegistry, label: "Schema Registry", className: "" },
-  { src: incidentDocker, label: "Docker stack", className: "md:col-span-2" },
+  { src: incidentKafka, label: "Kafka topics" },
+  { src: incidentRegistry, label: "Schema Registry" },
+  { src: incidentDocker, label: "Docker stack" },
 ];
 
 type ContactItem = {
@@ -273,69 +272,82 @@ function Projects({ content }: { content: (typeof portfolio)[Language]["projects
       title={content.title}
       intro={content.intro}
     >
-      <article className="overflow-hidden rounded-[1.5rem] border border-electric/25 bg-white shadow-glow dark:border-mint/20 dark:bg-white/[0.06]">
-        <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="bg-slate-950 p-5 dark:bg-ink-2 sm:p-6">
-            <div className="grid gap-3 md:grid-cols-2">
-              {incidentScreens.map((screen) => (
-                <figure
-                  key={screen.label}
-                  className={`${screen.className} overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl`}
+      <article className="overflow-hidden rounded-[1.5rem] border border-electric/20 bg-white shadow-glow dark:border-mint/20 dark:bg-white/[0.06]">
+        <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="flex flex-col justify-between bg-gradient-to-br from-slate-950 via-slate-900 to-ink p-7 text-white dark:from-ink-2 dark:to-slate-950">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint">{content.featured}</p>
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{content.projectTitle}</h3>
+              <p className="mt-5 text-lg leading-8 text-slate-200">{content.description}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-mint"
+                  href={content.repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <img src={screen.src} alt={`${content.projectTitle} - ${screen.label}`} className="h-full min-h-32 w-full object-cover" />
+                  <Github size={16} />
+                  GitHub
+                  <ExternalLink size={14} />
+                </a>
+                <span className="inline-flex items-center rounded-full border border-mint/30 bg-mint/10 px-4 py-3 text-sm font-semibold text-mint">
+                  {content.status}
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {content.metrics.map(([value, label]) => (
+                <div key={label} className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+                  <p className="text-3xl font-semibold">{value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-slate-400">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-white via-sky-50/80 to-emerald-50/70 p-5 dark:from-white/[0.08] dark:via-electric/[0.08] dark:to-mint/[0.07] sm:p-6">
+            <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10">
+              <img src={incidentUi} alt={`${content.projectTitle} - investigation dashboard`} className="w-full object-cover" />
+            </figure>
+
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {incidentScreens.map((screen) => (
+                <figure key={screen.label} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10">
+                  <img src={screen.src} alt={`${content.projectTitle} - ${screen.label}`} className="aspect-[16/9] w-full object-cover" />
+                  <figcaption className="border-t border-slate-100 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:border-white/10 dark:text-slate-400">
+                    {screen.label}
+                  </figcaption>
                 </figure>
               ))}
             </div>
           </div>
-          <div className="bg-gradient-to-br from-white via-sky-50/90 to-emerald-50/80 p-7 dark:from-white/[0.08] dark:via-electric/[0.08] dark:to-mint/[0.07]">
-            <div className="flex flex-wrap items-start justify-between gap-5">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">{content.featured}</p>
-                <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 dark:text-white">{content.projectTitle}</h3>
-              </div>
-              <a
-                className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-electric dark:bg-white dark:text-ink dark:hover:bg-mint"
-                href={content.repoUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github size={16} />
-                GitHub
-                <ExternalLink size={14} />
-              </a>
-            </div>
-            <p className="mt-3 inline-flex rounded-full border border-electric/20 bg-electric/10 px-3 py-1 text-xs font-semibold text-electric dark:border-mint/20 dark:bg-mint/10 dark:text-mint">
-              {content.status}
-            </p>
-            <p className="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">{content.description}</p>
+        </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              {content.metrics.map(([value, label]) => (
-                <div key={label} className="rounded-xl border border-slate-200 bg-white/85 p-4 shadow-sm dark:border-white/10 dark:bg-white/5">
-                  <p className="text-2xl font-semibold text-slate-950 dark:text-white">{value}</p>
-                  <p className="mt-1 text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">{label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 space-y-3">
+        <div className="grid gap-6 border-t border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-white/[0.03] lg:grid-cols-[1fr_0.75fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">Engineering depth</p>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
               {content.highlights.map((highlight) => (
-                <div key={highlight} className="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                <div key={highlight} className="flex gap-3 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric dark:bg-mint" />
                   <span>{highlight}</span>
                 </div>
               ))}
             </div>
+          </div>
 
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">Stack</p>
             <div className="mt-6 flex flex-wrap gap-2">
               {content.stack.map((tech) => (
                 <Badge key={tech}>{tech}</Badge>
               ))}
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white/80 p-4 text-sm leading-6 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+            <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm leading-6 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
               <p>{content.note}</p>
-              <a className="inline-flex shrink-0 items-center gap-2 font-semibold text-electric transition hover:text-slate-950 dark:text-mint dark:hover:text-white" href={content.repoUrl} target="_blank" rel="noreferrer">
+              <a className="mt-4 inline-flex items-center gap-2 font-semibold text-electric transition hover:text-slate-950 dark:text-mint dark:hover:text-white" href={content.repoUrl} target="_blank" rel="noreferrer">
                 {content.repoLabel}
                 <ExternalLink size={15} />
               </a>
