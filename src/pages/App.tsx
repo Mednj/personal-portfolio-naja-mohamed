@@ -321,6 +321,15 @@ function Projects({ content }: { content: (typeof portfolio)[Language]["projects
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-mint"
+                  href={content.liveDemoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {content.liveDemoLabel}
+                  <ExternalLink size={14} />
+                </a>
+                <a
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.08] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-mint hover:text-mint"
                   href={content.repoUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -386,10 +395,16 @@ function Projects({ content }: { content: (typeof portfolio)[Language]["projects
 
             <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm leading-6 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
               <p>{content.note}</p>
-              <a className="mt-4 inline-flex items-center gap-2 font-semibold text-electric transition hover:text-slate-950 dark:text-mint dark:hover:text-white" href={content.repoUrl} target="_blank" rel="noreferrer">
-                {content.repoLabel}
-                <ExternalLink size={15} />
-              </a>
+              <div className="mt-4 flex flex-wrap gap-4">
+                <a className="inline-flex items-center gap-2 font-semibold text-electric transition hover:text-slate-950 dark:text-mint dark:hover:text-white" href={content.liveDemoUrl} target="_blank" rel="noreferrer">
+                  {content.liveDemoLabel}
+                  <ExternalLink size={15} />
+                </a>
+                <a className="inline-flex items-center gap-2 font-semibold text-electric transition hover:text-slate-950 dark:text-mint dark:hover:text-white" href={content.repoUrl} target="_blank" rel="noreferrer">
+                  {content.repoLabel}
+                  <ExternalLink size={15} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -141,6 +141,8 @@ export const portfolio = {
       projectTitle: "AI Incident & Log Investigation Platform",
       description:
         "A distributed investigation platform that ingests production logs, validates Avro events through Schema Registry, groups failures into incidents, and gives developers an AI-ready workspace for diagnosis.",
+      liveDemoLabel: "Open live demo",
+      liveDemoUrl: "https://incident-platform-ai.vercel.app/",
       repoLabel: "View GitHub repository",
       repoUrl: "https://github.com/Mednj/incident-platform-AI",
       status: "MVP implemented and runnable locally",
@@ -303,6 +305,8 @@ export const portfolio = {
       projectTitle: "Plateforme d'investigation d'incidents et de logs",
       description:
         "Un système distribué pour ingérer des logs, traiter les événements via Kafka, stocker les incidents et aider les développeurs à investiguer les problèmes de production grâce à une analyse assistée par IA.",
+      liveDemoLabel: "Ouvrir la demo",
+      liveDemoUrl: "https://incident-platform-ai.vercel.app/",
       repoLabel: "Voir le depot GitHub",
       repoUrl: "https://github.com/Mednj/incident-platform-AI",
       status: "MVP implemente et executable en local",
