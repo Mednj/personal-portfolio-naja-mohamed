@@ -24,41 +24,41 @@ export const navItems = {
 export const portfolio = {
   en: {
     metaDescription:
-      "Backend software engineer focused on distributed systems, fintech, real-time payments, Java, Spring Boot, Kafka, microservices, and cloud-native deployment.",
+      "Software engineer with 2 years of production experience across software development, data, AI, automation, cloud, and fintech systems.",
     hero: {
       badge: "Open to alternance from September 2026",
       eyebrow: "Software Engineer",
-      title: "Software Engineer | Distributed Systems | Fintech & Real-Time Payments",
+      title: "Software Engineer | Data, AI & Cloud | Fintech",
       tagline:
-        "I build backend systems for real-time financial transactions, event-driven architectures, and scalable banking platforms.",
+        "I turn complex business and technical needs into reliable software, data flows, automation, and production-ready digital products.",
       ctas: {
         experience: "View Experience",
         cv: "Download CV",
         contact: "Contact Me",
       },
       stats: [
-        ["2+", "Years prod."],
+        ["2", "Years experience"],
         ["4", "Banking clients"],
-        ["24/7", "Systems mindset"],
+        ["M2", "MIAGE Lyon 1"],
       ],
     },
     about: {
       eyebrow: "About",
-      title: "Backend engineering for banking systems that cannot afford ambiguity.",
+      title: "A versatile engineering profile bridging software, data, AI, cloud, and product needs.",
       paragraphs: [
-        "I am a software engineer with around 2 years of production experience in banking and fintech systems. I work on real-time transaction processing, distributed systems, Kafka pipelines, Java/Spring Boot microservices, and cloud-native deployments. I have contributed to international banking projects involving Visa, Mastercard, PowerCARD, and critical production environments.",
-        "I am admitted to M2 MIAGE at Universite Claude Bernard Lyon 1 and looking for an alternance starting September 2026.",
+        "I am a software engineer with 2 years of production experience on critical transaction systems and distributed architectures in international banking and fintech. My work combines software development, real-time data flows, system integration, automation, functional validation, production support, and collaboration with business and technical teams.",
+        "Admitted to the M2 MIAGE program at Universite Claude Bernard Lyon 1, I am looking for an alternance starting September 2026 and remain open to software engineering, data and analytics, AI and automation, cloud, and product-oriented roles.",
       ],
       highlights: [
-        ["Primary focus", "Backend Java, distributed systems, real-time payments"],
+        ["Profile", "Software engineering, data, AI, cloud, and product collaboration"],
         ["Business domain", "Fintech, banking, transaction monitoring, card systems"],
-        ["Target role", "Software engineering alternance in France"],
+        ["Target roles", "Engineering, Data/Analytics, AI/Automation, Cloud, Product Data"],
       ],
       strengthsTitle: "What I bring",
       strengths: [
         "Production mindset: incident analysis, stabilization, non-regression testing.",
-        "Backend depth: Java/Spring Boot microservices, Kafka pipelines, secure integrations.",
-        "Banking context: card transactions, PowerCARD, Visa/Mastercard environments.",
+        "Technical range: Java/Spring Boot, Python, Kafka, SQL, APIs, cloud-native delivery, and data analysis.",
+        "Cross-functional experience: business validation, documentation, coordination, and reliable delivery.",
       ],
     },
     experienceIntro: {
@@ -119,7 +119,7 @@ export const portfolio = {
     ],
     skillsIntro: {
       eyebrow: "Skills",
-      title: "A backend-first stack for event-driven financial platforms.",
+      title: "A multidisciplinary stack for software, data, AI, cloud, and production systems.",
     },
     educationIntro: {
       eyebrow: "Education",
@@ -174,24 +174,24 @@ export const portfolio = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Open to software engineering alternance opportunities starting September 2026.",
+      title: "Open to diverse technology alternance opportunities starting September 2026.",
       paragraph:
-        "I am looking for a backend-focused alternance in France where I can contribute to production systems, distributed architecture, financial transaction platforms, and engineering teams that care about reliability.",
+        "Based in Villeurbanne, I am looking for an alternance in France where I can contribute across software engineering, data and analytics, AI and automation, cloud platforms, or product-oriented technology teams.",
       emailButton: "Email Me",
       cvButton: "Download CV",
-      labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Phone France", phoneMa: "Phone Morocco", location: "Location" },
+      labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Phone", location: "Location" },
     },
-    footer: "Mohamed NAJA - Software Engineer specialized in distributed systems and fintech platforms.",
+    footer: "Mohamed NAJA - Software Engineer | Data, AI, Cloud & Fintech.",
   },
   fr: {
     metaDescription:
-      "Ingénieur logiciel backend spécialisé en systèmes distribués, fintech, paiements temps réel, Java, Spring Boot, Kafka, microservices et déploiement cloud-native.",
+      "Ingénieur logiciel avec 2 ans d'expérience en production, ouvert aux métiers du développement, de la data, de l'IA, de l'automatisation, du cloud et des produits numériques.",
     hero: {
-      badge: "Recherche alternance backend Java - disponible dès septembre 2026",
+      badge: "Recherche alternance - disponible dès septembre 2026",
       eyebrow: "Ingénieur Logiciel",
-      title: "Ingénieur Logiciel Backend Java | Systèmes Distribués | Fintech",
+      title: "Ingénieur Logiciel | Data, IA & Cloud | Fintech",
       tagline:
-        "Je conçois des systèmes backend pour les transactions financières en temps réel, les architectures événementielles et les plateformes bancaires scalables.",
+        "Je transforme des besoins métier et techniques complexes en logiciels fiables, flux de données, automatisations et produits numériques prêts pour la production.",
       ctas: {
         experience: "Voir l'expérience",
         cv: "Télécharger le CV",
@@ -205,13 +205,13 @@ export const portfolio = {
     },
     about: {
       eyebrow: "Profil",
-      title: "Profil backend Java orienté production, systèmes distribués et fintech.",
+      title: "Un profil polyvalent à l'interface du logiciel, de la data, de l'IA, du cloud et du produit.",
       paragraphs: [
-        "Ingénieur logiciel backend avec environ 2 ans d'expérience en production dans la banque et la fintech. J'interviens sur le traitement de transactions financières en temps réel, les architectures événementielles Kafka, les microservices Java/Spring Boot et les déploiements cloud-native.",
-        "Admis en M2 MIAGE à l'Université Claude Bernard Lyon 1, formation RNCP39490, je recherche une alternance en ingénierie logicielle à partir de septembre 2026, idéalement sur des sujets backend Java, systèmes distribués, paiements ou plateformes bancaires.",
+        "Ingénieur logiciel avec 2 ans d'expérience en production sur des systèmes transactionnels critiques et des architectures distribuées dans la banque et la fintech internationales. Mon expérience couvre le développement logiciel, les flux de données temps réel, l'intégration de systèmes, l'automatisation, la validation fonctionnelle, le support production et la collaboration avec les équipes métier et techniques.",
+        "Admis en M2 MIAGE à l'Université Claude Bernard Lyon 1, formation RNCP39490, je recherche une alternance à partir de septembre 2026 et reste ouvert aux rôles en ingénierie logicielle, data et analytics, IA et automatisation, cloud, ainsi qu'aux fonctions produit orientées data.",
       ],
       highlights: [
-        ["Objectif alternance", "Backend Java / systèmes distribués / fintech"],
+        ["Profil", "Logiciel / Data / IA / Cloud / Produit"],
         ["Disponibilité", "À partir de septembre 2026"],
         ["Rythme sept.-fév.", "2 semaines entreprise / 2 semaines formation"],
         ["Rythme mars-juin", "3 semaines entreprise / 1 semaine formation"],
@@ -221,8 +221,8 @@ export const portfolio = {
       strengthsTitle: "Ce que j'apporte",
       strengths: [
         "Culture production : analyse d'incidents, stabilisation, tests de non-régression.",
-        "Expertise backend : microservices Java/Spring Boot, pipelines Kafka, intégrations sécurisées.",
-        "Contexte bancaire : transactions cartes, PowerCARD, environnements Visa/Mastercard.",
+        "Polyvalence technique : Java/Spring Boot, Python, Kafka, SQL, APIs, cloud-native et analyse de données.",
+        "Expérience transverse : validation métier, documentation, coordination et fiabilisation des livraisons.",
       ],
     },
     experienceIntro: {
@@ -283,7 +283,7 @@ export const portfolio = {
     ],
     skillsIntro: {
       eyebrow: "Compétences",
-      title: "Compétences ciblées pour une alternance backend Java en France.",
+      title: "Compétences transverses en logiciel, data, IA, cloud et systèmes de production.",
     },
     educationIntro: {
       eyebrow: "Formation",
@@ -338,14 +338,14 @@ export const portfolio = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Recherche alternance ingénierie logicielle à partir de septembre 2026.",
+      title: "Ouvert à différentes opportunités d'alternance tech à partir de septembre 2026.",
       paragraph:
-        "Je recherche une alternance orientée backend Java en France, dans le cadre du M2 MIAGE à l'Université Claude Bernard Lyon 1 - RNCP39490. Disponible à partir de septembre 2026 : 2 semaines entreprise / 2 semaines formation de septembre à février, 3 semaines entreprise / 1 semaine formation de mars à juin, puis temps plein en entreprise en juillet-août.",
+        "Basé à Villeurbanne, je recherche une alternance en France dans le cadre du M2 MIAGE à l'Université Claude Bernard Lyon 1 - RNCP39490. Je suis ouvert aux missions en ingénierie logicielle, data et analytics, IA et automatisation, cloud ou produit data. Disponible à partir de septembre 2026 : 2 semaines entreprise / 2 semaines formation de septembre à février, 3 semaines entreprise / 1 semaine formation de mars à juin, puis temps plein en entreprise en juillet-août.",
       emailButton: "M'écrire",
       cvButton: "Télécharger le CV",
-      labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Téléphone France", phoneMa: "Téléphone Maroc", location: "Localisation" },
+      labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Téléphone", location: "Localisation" },
     },
-    footer: "Mohamed NAJA - Recherche alternance backend Java, systèmes distribués et fintech - septembre 2026.",
+    footer: "Mohamed NAJA - Ingénieur Logiciel | Data, IA, Cloud & Fintech - alternance septembre 2026.",
   },
 };
 

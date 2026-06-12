@@ -98,7 +98,7 @@ function Hero({ content }: { content: (typeof portfolio)[Language]["hero"] }) {
           <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-600 dark:text-slate-300">
             <span className="inline-flex items-center gap-2">
               <MapPin size={16} />
-              Lyon, France / Casablanca, Morocco
+              Villeurbanne, France
             </span>
             <a className="inline-flex items-center gap-2 transition hover:text-electric dark:hover:text-mint" href="mailto:contact@mohamednaja.com">
               <Mail size={16} />
@@ -418,8 +418,7 @@ function Contact({ content }: { content: (typeof portfolio)[Language]["contact"]
     { label: content.labels.email, value: "contact@mohamednaja.com", href: "mailto:contact@mohamednaja.com", Icon: Mail },
     { label: content.labels.linkedin, value: "linkedin.com/in/mohamed-naja", href: "https://linkedin.com/in/mohamed-naja", Icon: Linkedin },
     { label: content.labels.phoneFr, value: "+33 6 44 66 74 92", href: "tel:+33644667492", Icon: Phone },
-    { label: content.labels.phoneMa, value: "+212 653 226 584", href: "tel:+212653226584", Icon: Phone },
-    { label: content.labels.location, value: "Lyon, France / Casablanca, Morocco", href: null, Icon: MapPin },
+    { label: content.labels.location, value: "Villeurbanne, France", href: null, Icon: MapPin },
   ];
 
   return (
