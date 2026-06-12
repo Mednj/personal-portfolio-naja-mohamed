@@ -24,13 +24,13 @@ export const navItems = {
 export const portfolio = {
   en: {
     metaDescription:
-      "Software engineer with 2 years of production experience across software development, data, AI, automation, cloud, and fintech systems.",
+      "Backend and cloud software engineer with 2 years of production experience in distributed fintech systems and advanced use of generative AI for development acceleration.",
     hero: {
       badge: "Open to alternance from September 2026",
       eyebrow: "Software Engineer",
-      title: "Software Engineer | Data, AI & Cloud | Fintech",
+      title: "Backend & Cloud Software Engineer | Fintech",
       tagline:
-        "I turn complex business and technical needs into reliable software, data flows, automation, and production-ready digital products.",
+        "I build reliable distributed backend systems and cloud-native services, using generative AI to accelerate development, debugging, testing, and documentation.",
       ctas: {
         experience: "View Experience",
         cv: "Download CV",
@@ -44,21 +44,21 @@ export const portfolio = {
     },
     about: {
       eyebrow: "About",
-      title: "A versatile engineering profile bridging software, data, AI, cloud, and product needs.",
+      title: "Backend and cloud engineering strengthened by advanced AI-assisted development.",
       paragraphs: [
-        "I am a software engineer with 2 years of production experience on critical transaction systems and distributed architectures in international banking and fintech. My work combines software development, real-time data flows, system integration, automation, functional validation, production support, and collaboration with business and technical teams.",
-        "Admitted to the M2 MIAGE program at Universite Claude Bernard Lyon 1, I am looking for an alternance starting September 2026 and remain open to software engineering, data and analytics, AI and automation, cloud, and product-oriented roles.",
+        "I am a software engineer with 2 years of production experience on critical transaction systems and distributed architectures in international banking and fintech. I work with Java/Spring Boot microservices, Kafka, APIs, SQL, Kubernetes, and cloud-native delivery, from implementation and integration through production support.",
+        "I use generative AI tools extensively to accelerate software development, code analysis, debugging, testing, documentation, and technical exploration. Admitted to the M2 MIAGE program at Universite Claude Bernard Lyon 1, I am looking for a backend or cloud engineering alternance starting September 2026.",
       ],
       highlights: [
-        ["Profile", "Software engineering, data, AI, cloud, and product collaboration"],
+        ["Primary focus", "Backend engineering and cloud-native systems"],
         ["Business domain", "Fintech, banking, transaction monitoring, card systems"],
-        ["Target roles", "Engineering, Data/Analytics, AI/Automation, Cloud, Product Data"],
+        ["AI practice", "Advanced generative AI usage for development acceleration"],
       ],
       strengthsTitle: "What I bring",
       strengths: [
         "Production mindset: incident analysis, stabilization, non-regression testing.",
-        "Technical range: Java/Spring Boot, Python, Kafka, SQL, APIs, cloud-native delivery, and data analysis.",
-        "Cross-functional experience: business validation, documentation, coordination, and reliable delivery.",
+        "Backend and cloud depth: Java/Spring Boot, Kafka, APIs, SQL, Docker, Kubernetes, and CI/CD.",
+        "AI-assisted engineering: faster coding, debugging, testing, documentation, and technical research.",
       ],
     },
     experienceIntro: {
@@ -119,7 +119,7 @@ export const portfolio = {
     ],
     skillsIntro: {
       eyebrow: "Skills",
-      title: "A multidisciplinary stack for software, data, AI, cloud, and production systems.",
+      title: "Backend and cloud skills for distributed, production-critical systems.",
     },
     educationIntro: {
       eyebrow: "Education",
@@ -174,24 +174,24 @@ export const portfolio = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Open to diverse technology alternance opportunities starting September 2026.",
+      title: "Open to backend and cloud engineering alternance opportunities from September 2026.",
       paragraph:
-        "Based in Villeurbanne, I am looking for an alternance in France where I can contribute across software engineering, data and analytics, AI and automation, cloud platforms, or product-oriented technology teams.",
+        "Based in Villeurbanne, I am looking for a backend or cloud engineering alternance in France where I can contribute to distributed systems, production platforms, and teams adopting generative AI to accelerate software delivery.",
       emailButton: "Email Me",
       cvButton: "Download CV",
       labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Phone", location: "Location" },
     },
-    footer: "Mohamed NAJA - Software Engineer | Data, AI, Cloud & Fintech.",
+    footer: "Mohamed NAJA - Backend & Cloud Software Engineer | AI-Assisted Development.",
   },
   fr: {
     metaDescription:
-      "Ingénieur logiciel avec 2 ans d'expérience en production, ouvert aux métiers du développement, de la data, de l'IA, de l'automatisation, du cloud et des produits numériques.",
+      "Ingénieur logiciel backend et cloud avec 2 ans d'expérience en production sur des systèmes fintech distribués et une utilisation avancée de l'IA générative pour accélérer le développement.",
     hero: {
       badge: "Recherche alternance - disponible dès septembre 2026",
       eyebrow: "Ingénieur Logiciel",
-      title: "Ingénieur Logiciel | Data, IA & Cloud | Fintech",
+      title: "Ingénieur Logiciel Backend & Cloud | Fintech",
       tagline:
-        "Je transforme des besoins métier et techniques complexes en logiciels fiables, flux de données, automatisations et produits numériques prêts pour la production.",
+        "Je développe des systèmes backend distribués et des services cloud-native fiables, en utilisant l'IA générative pour accélérer le développement, le debugging, les tests et la documentation.",
       ctas: {
         experience: "Voir l'expérience",
         cv: "Télécharger le CV",
@@ -205,13 +205,13 @@ export const portfolio = {
     },
     about: {
       eyebrow: "Profil",
-      title: "Un profil polyvalent à l'interface du logiciel, de la data, de l'IA, du cloud et du produit.",
+      title: "Ingénierie backend et cloud renforcée par une utilisation avancée de l'IA en développement.",
       paragraphs: [
-        "Ingénieur logiciel avec 2 ans d'expérience en production sur des systèmes transactionnels critiques et des architectures distribuées dans la banque et la fintech internationales. Mon expérience couvre le développement logiciel, les flux de données temps réel, l'intégration de systèmes, l'automatisation, la validation fonctionnelle, le support production et la collaboration avec les équipes métier et techniques.",
-        "Admis en M2 MIAGE à l'Université Claude Bernard Lyon 1, formation RNCP39490, je recherche une alternance à partir de septembre 2026 et reste ouvert aux rôles en ingénierie logicielle, data et analytics, IA et automatisation, cloud, ainsi qu'aux fonctions produit orientées data.",
+        "Ingénieur logiciel avec 2 ans d'expérience en production sur des systèmes transactionnels critiques et des architectures distribuées dans la banque et la fintech internationales. J'interviens sur des microservices Java/Spring Boot, Kafka, les APIs, SQL, Kubernetes et les déploiements cloud-native, du développement jusqu'au support production.",
+        "J'utilise quotidiennement et de manière avancée les outils d'IA générative pour accélérer le développement logiciel, l'analyse de code, le debugging, les tests, la documentation et l'exploration technique. Admis en M2 MIAGE à l'Université Claude Bernard Lyon 1, je recherche une alternance backend ou cloud à partir de septembre 2026.",
       ],
       highlights: [
-        ["Profil", "Logiciel / Data / IA / Cloud / Produit"],
+        ["Spécialisation", "Backend et systèmes cloud-native"],
         ["Disponibilité", "À partir de septembre 2026"],
         ["Rythme sept.-fév.", "2 semaines entreprise / 2 semaines formation"],
         ["Rythme mars-juin", "3 semaines entreprise / 1 semaine formation"],
@@ -221,8 +221,8 @@ export const portfolio = {
       strengthsTitle: "Ce que j'apporte",
       strengths: [
         "Culture production : analyse d'incidents, stabilisation, tests de non-régression.",
-        "Polyvalence technique : Java/Spring Boot, Python, Kafka, SQL, APIs, cloud-native et analyse de données.",
-        "Expérience transverse : validation métier, documentation, coordination et fiabilisation des livraisons.",
+        "Expertise backend et cloud : Java/Spring Boot, Kafka, APIs, SQL, Docker, Kubernetes et CI/CD.",
+        "Développement assisté par IA : accélération du code, debugging, tests, documentation et recherche technique.",
       ],
     },
     experienceIntro: {
@@ -283,7 +283,7 @@ export const portfolio = {
     ],
     skillsIntro: {
       eyebrow: "Compétences",
-      title: "Compétences transverses en logiciel, data, IA, cloud et systèmes de production.",
+      title: "Compétences backend et cloud pour des systèmes distribués critiques en production.",
     },
     educationIntro: {
       eyebrow: "Formation",
@@ -338,14 +338,14 @@ export const portfolio = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Ouvert à différentes opportunités d'alternance tech à partir de septembre 2026.",
+      title: "Recherche alternance backend ou cloud à partir de septembre 2026.",
       paragraph:
-        "Basé à Villeurbanne, je recherche une alternance en France dans le cadre du M2 MIAGE à l'Université Claude Bernard Lyon 1 - RNCP39490. Je suis ouvert aux missions en ingénierie logicielle, data et analytics, IA et automatisation, cloud ou produit data. Disponible à partir de septembre 2026 : 2 semaines entreprise / 2 semaines formation de septembre à février, 3 semaines entreprise / 1 semaine formation de mars à juin, puis temps plein en entreprise en juillet-août.",
+        "Basé à Villeurbanne, je recherche une alternance backend ou cloud en France dans le cadre du M2 MIAGE à l'Université Claude Bernard Lyon 1 - RNCP39490. Je souhaite contribuer à des systèmes distribués et des plateformes de production, au sein d'équipes qui exploitent aussi l'IA générative pour accélérer le développement logiciel. Disponible à partir de septembre 2026 : 2 semaines entreprise / 2 semaines formation de septembre à février, 3 semaines entreprise / 1 semaine formation de mars à juin, puis temps plein en entreprise en juillet-août.",
       emailButton: "M'écrire",
       cvButton: "Télécharger le CV",
       labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Téléphone", location: "Localisation" },
     },
-    footer: "Mohamed NAJA - Ingénieur Logiciel | Data, IA, Cloud & Fintech - alternance septembre 2026.",
+    footer: "Mohamed NAJA - Ingénieur Logiciel Backend & Cloud | Développement assisté par IA.",
   },
 };
 
