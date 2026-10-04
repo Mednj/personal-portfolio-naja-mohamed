@@ -1,6 +1,8 @@
 import {
   ArrowDown,
   Award,
+  Cloud,
+  Bell,
   BriefcaseBusiness,
   Download,
   ExternalLink,
@@ -23,7 +25,7 @@ import { Background } from "../components/Background";
 import { Badge } from "../components/Badge";
 import { Navbar } from "../components/Navbar";
 import { Section } from "../components/Section";
-import { certifications, education, type Language, portfolio, skills } from "../data/portfolio";
+import { awsLearning, dealWatcher, certifications, education, type Language, portfolio, skills } from "../data/portfolio";
 
 const cvHref = "/Mohamed-NAJA-CV-Alternance-M2-2026.pdf";
 const incidentScreens = [
@@ -63,8 +65,8 @@ function App() {
         <Experience content={content.experienceIntro} items={content.experience} />
         <Skills content={content.skillsIntro} />
         <Education content={content.educationIntro} language={language} />
-        <Certifications content={content.certificationsIntro} />
-        <Projects content={content.projects} />
+        <Certifications content={content.certificationsIntro} language={language} />
+        <Projects content={content.projects} language={language} />
         <Contact content={content.contact} />
       </main>
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-white/10 dark:text-slate-400">
@@ -266,9 +268,17 @@ function Education({
   );
 }
 
-function Certifications({ content }: { content: (typeof portfolio)[Language]["certificationsIntro"] }) {
+function Certifications({ content, language }: { content: (typeof portfolio)[Language]["certificationsIntro"]; language: Language }) {
+  const aws = awsLearning[language];
   return (
     <Section id="certifications" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+      <article className="mb-6 rounded-2xl border border-electric/30 bg-gradient-to-br from-sky-50 to-white p-6 dark:border-mint/30 dark:from-electric/10 dark:to-white/5">
+        <Cloud className="text-electric dark:text-mint" size={28} />
+        <p className="mt-4 text-sm font-semibold text-electric dark:text-mint">{aws.status}</p>
+        <h3 className="mt-2 text-2xl font-semibold text-slate-950 dark:text-white">{aws.title}</h3>
+        <p className="mt-3 max-w-3xl leading-7 text-slate-600 dark:text-slate-300">{aws.description}</p>
+        <div className="mt-5 flex flex-wrap gap-2">{aws.tags.map((tag) => <Badge key={tag}>{tag}</Badge>)}</div>
+      </article>
       <div className="grid gap-4 md:grid-cols-2">
         {certifications.map((certification) => (
           <a
@@ -303,7 +313,8 @@ function Certifications({ content }: { content: (typeof portfolio)[Language]["ce
   );
 }
 
-function Projects({ content }: { content: (typeof portfolio)[Language]["projects"] }) {
+function Projects({ content, language }: { content: (typeof portfolio)[Language]["projects"]; language: Language }) {
+  const watcher = dealWatcher[language];
   return (
     <Section
       id="projects"
@@ -374,7 +385,7 @@ function Projects({ content }: { content: (typeof portfolio)[Language]["projects
 
         <div className="grid gap-6 border-t border-slate-200 bg-white p-7 dark:border-white/10 dark:bg-white/[0.03] lg:grid-cols-[1fr_0.75fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">Engineering depth</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">{language === "fr" ? "Conception technique" : "Engineering depth"}</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {content.highlights.map((highlight) => (
                 <div key={highlight} className="flex gap-3 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
@@ -409,6 +420,23 @@ function Projects({ content }: { content: (typeof portfolio)[Language]["projects
           </div>
         </div>
       </article>
+      <article className="mt-8 rounded-[1.5rem] border border-slate-200 bg-gradient-to-br from-white to-sky-50 p-7 dark:border-white/10 dark:from-white/[0.06] dark:to-electric/[0.08]">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div>
+            <Bell className="text-electric dark:text-mint" size={28} />
+            <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-electric dark:text-mint">{watcher.eyebrow}</p>
+            <h3 className="mt-3 text-3xl font-semibold text-slate-950 dark:text-white">{watcher.title}</h3>
+            <p className="mt-4 leading-8 text-slate-600 dark:text-slate-300">{watcher.description}</p>
+            <div className="mt-5 flex flex-wrap gap-2">{["Python", "FastAPI", "SQLite", "Docker Compose", "GitHub Actions", "Playwright", "Telegram"].map((tag) => <Badge key={tag}>{tag}</Badge>)}</div>
+            <a className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-ink" href="https://github.com/Mednj/ps5-deal-watcher" target="_blank" rel="noreferrer"><Github size={16} />{watcher.repoLabel}<ExternalLink size={14} /></a>
+          </div>
+          <div>
+            <ol className="grid grid-cols-2 gap-3">{watcher.flow.map((step, index) => <li key={step} className="rounded-xl border border-electric/20 bg-electric/5 p-4 dark:border-mint/20 dark:bg-mint/5"><span className="text-xs font-semibold text-electric dark:text-mint">0{index + 1}</span><p className="mt-2 text-sm font-medium text-slate-800 dark:text-slate-200">{step}</p></li>)}</ol>
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700 dark:text-slate-300">{watcher.highlights.map((highlight) => <li key={highlight} className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric dark:bg-mint" /><span>{highlight}</span></li>)}</ul>
+          </div>
+        </div>
+        <p className="mt-6 border-t border-slate-200 pt-5 text-sm leading-6 text-slate-500 dark:border-white/10 dark:text-slate-400">{watcher.note}</p>
+      </article>
     </Section>
   );
 }
@@ -417,7 +445,7 @@ function Contact({ content }: { content: (typeof portfolio)[Language]["contact"]
   const contactItems: ContactItem[] = [
     { label: content.labels.email, value: "contact@mohamednaja.com", href: "mailto:contact@mohamednaja.com", Icon: Mail },
     { label: content.labels.linkedin, value: "linkedin.com/in/mohamed-naja", href: "https://linkedin.com/in/mohamed-naja", Icon: Linkedin },
-    { label: content.labels.phoneFr, value: "+33 6 44 66 74 92", href: "tel:+33644667492", Icon: Phone },
+    { label: content.labels.phoneFr, value: "+33 7 45 50 11 92", href: "tel:+33745501192", Icon: Phone },
     { label: content.labels.location, value: "Villeurbanne, France", href: null, Icon: MapPin },
   ];
 
