@@ -20,12 +20,13 @@ import incidentDocker from "../assets/incident-platform-docker.svg";
 import incidentKafka from "../assets/incident-platform-kafka.svg";
 import incidentRegistry from "../assets/incident-platform-registry.svg";
 import incidentUi from "../assets/incident-platform-ui.svg";
+import watcherScreenshot from "../assets/ps5-watcher-actual.png";
 import portrait from "../assets/mohamed-naja-portrait.jpg";
 import { Background } from "../components/Background";
 import { Badge } from "../components/Badge";
 import { Navbar } from "../components/Navbar";
 import { Section } from "../components/Section";
-import { awsLearning, dealWatcher, certifications, education, type Language, portfolio, skills } from "../data/portfolio";
+import { cloudPractice, awsLearning, dealWatcher, certifications, education, type Language, portfolio, skills } from "../data/portfolio";
 
 const cvHref = "/Mohamed-NAJA-CV-Alternance-M2-2026.pdf";
 const incidentScreens = [
@@ -62,8 +63,8 @@ function App() {
       <main id="home">
         <Hero content={content.hero} />
         <About content={content.about} />
-        <Experience content={content.experienceIntro} items={content.experience} />
-        <Skills content={content.skillsIntro} />
+        <Experience content={content.experienceIntro} items={content.experience} language={language} />
+        <Skills content={content.skillsIntro} language={language} />
         <Education content={content.educationIntro} language={language} />
         <Certifications content={content.certificationsIntro} language={language} />
         <Projects content={content.projects} language={language} />
@@ -182,7 +183,9 @@ function About({ content }: { content: (typeof portfolio)[Language]["about"] }) 
 function Experience({
   content,
   items,
+  language,
 }: {
+  language: Language;
   content: (typeof portfolio)[Language]["experienceIntro"];
   items: (typeof portfolio)[Language]["experience"];
 }) {
@@ -193,6 +196,12 @@ function Experience({
       title={content.title}
       intro={content.intro}
     >
+      <article className="mb-6 rounded-2xl border border-electric/30 bg-electric/5 p-6 dark:border-mint/30 dark:bg-mint/5">
+        <p className="text-sm font-semibold uppercase tracking-widest text-electric dark:text-mint">{language === "fr" ? "Employeur" : "Employer"}</p>
+        <h3 className="mt-3 text-2xl font-semibold text-slate-950 dark:text-white">{language === "fr" ? "Ingénieur Logiciel — HPS" : "Software Engineer — HPS"}</h3>
+        <p className="mt-2 font-medium text-slate-700 dark:text-slate-200">{language === "fr" ? "Août 2024 – Août 2026 · Casablanca, Maroc" : "August 2024 – August 2026 · Casablanca, Morocco"}</p>
+        <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{language === "fr" ? "Hightech Payment Systems, éditeur de la plateforme PowerCARD. Les projets ci-dessous sont des missions réalisées chez HPS pour ses clients ; ils ne correspondent pas à des emplois directs auprès de ces banques." : "Hightech Payment Systems, publisher of the PowerCARD platform. The projects below are client assignments delivered while employed at HPS, rather than direct employment with those banks."}</p>
+      </article>
       <div className="relative grid gap-5">
         {items.map((item) => (
           <article key={item.client} className="group grid gap-5 rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-sky-50/80 p-6 shadow-sm transition hover:-translate-y-1 hover:border-electric/50 hover:shadow-glow dark:border-white/10 dark:from-white/[0.07] dark:via-white/[0.04] dark:to-electric/[0.08] dark:hover:border-mint/40 md:grid-cols-[0.42fr_1fr]">
@@ -200,7 +209,7 @@ function Experience({
               <div className="mb-4 flex h-16 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-sm dark:border-white/10 dark:bg-white">
                 <ClientLogo logo={item.logo} />
               </div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">{item.client}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-electric dark:text-mint">{language === "fr" ? "Mission client · " : "Client assignment · "}{item.client}</p>
               <h3 className="mt-2 text-2xl font-semibold text-slate-950 dark:text-white">{item.title}</h3>
               <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{item.period}</p>
             </div>
@@ -226,9 +235,10 @@ function Experience({
   );
 }
 
-function Skills({ content }: { content: (typeof portfolio)[Language]["skillsIntro"] }) {
+function Skills({ content, language }: { content: (typeof portfolio)[Language]["skillsIntro"]; language: Language }) {
   return (
     <Section id="skills" eyebrow={content.eyebrow} title={content.title}>
+      <div className="mb-6 grid gap-4 md:grid-cols-3">{cloudPractice[language].map((item) => <article key={item.title} className="rounded-2xl border border-electric/20 bg-electric/5 p-5 dark:border-mint/20 dark:bg-mint/5"><h3 className="font-semibold text-slate-950 dark:text-white">{item.title}</h3><p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{item.description}</p></article>)}</div>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((group) => (
           <div key={group.group} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-emerald-50/70 p-6 shadow-sm dark:border-white/10 dark:from-white/[0.06] dark:to-mint/[0.07]">
@@ -368,6 +378,7 @@ function Projects({ content, language }: { content: (typeof portfolio)[Language]
           <div className="bg-gradient-to-br from-white via-sky-50/80 to-emerald-50/70 p-5 dark:from-white/[0.08] dark:via-electric/[0.08] dark:to-mint/[0.07] sm:p-6">
             <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10">
               <img src={incidentUi} alt={`${content.projectTitle} - investigation dashboard`} className="w-full object-cover" />
+              <figcaption className="px-4 py-3 text-xs text-slate-600">{language === "fr" ? "Maquette illustrative de l’interface — pas une capture du logiciel." : "Illustrative interface mockup — not a software screenshot."}</figcaption>
             </figure>
 
             <div className="mt-4 grid gap-3 md:grid-cols-3">
@@ -375,7 +386,7 @@ function Projects({ content, language }: { content: (typeof portfolio)[Language]
                 <figure key={screen.label} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10">
                   <img src={screen.src} alt={`${content.projectTitle} - ${screen.label}`} className="aspect-[16/9] w-full object-cover" />
                   <figcaption className="border-t border-slate-100 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:border-white/10 dark:text-slate-400">
-                    {screen.label}
+                    {screen.label} · {language === "fr" ? "Illustration" : "Illustration"}
                   </figcaption>
                 </figure>
               ))}
@@ -421,6 +432,10 @@ function Projects({ content, language }: { content: (typeof portfolio)[Language]
         </div>
       </article>
       <article className="mt-8 rounded-[1.5rem] border border-slate-200 bg-gradient-to-br from-white to-sky-50 p-7 dark:border-white/10 dark:from-white/[0.06] dark:to-electric/[0.08]">
+        <figure className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-white/10">
+          <a href={watcherScreenshot} target="_blank" rel="noreferrer"><img src={watcherScreenshot} alt={language === "fr" ? "Capture réelle du tableau de bord PS5 Deals Watcher" : "Actual PS5 Deals Watcher dashboard screenshot"} className="max-h-[480px] w-full object-cover object-top" loading="lazy" /></a>
+          <figcaption className="px-4 py-3 text-xs leading-6 text-slate-600">{language === "fr" ? "Capture réelle du logiciel, instance locale vide (5 octobre 2026). Worker arrêté et Telegram non connecté pour cette démonstration. Cliquer pour voir la capture complète." : "Actual application screenshot, empty local instance (5 October 2026). Worker stopped and Telegram disconnected for this demonstration. Click to view the full capture."}</figcaption>
+        </figure>
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <Bell className="text-electric dark:text-mint" size={28} />
@@ -431,11 +446,21 @@ function Projects({ content, language }: { content: (typeof portfolio)[Language]
             <a className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-ink" href="https://github.com/Mednj/ps5-deal-watcher" target="_blank" rel="noreferrer"><Github size={16} />{watcher.repoLabel}<ExternalLink size={14} /></a>
           </div>
           <div>
-            <ol className="grid grid-cols-2 gap-3">{watcher.flow.map((step, index) => <li key={step} className="rounded-xl border border-electric/20 bg-electric/5 p-4 dark:border-mint/20 dark:bg-mint/5"><span className="text-xs font-semibold text-electric dark:text-mint">0{index + 1}</span><p className="mt-2 text-sm font-medium text-slate-800 dark:text-slate-200">{step}</p></li>)}</ol>
+            <figure className="rounded-xl border border-electric/20 bg-electric/5 p-5 dark:border-mint/20 dark:bg-mint/5">
+              <figcaption className="mb-4 text-sm font-semibold text-slate-950 dark:text-white">{language === "fr" ? "Architecture simplifiée" : "Simplified architecture"}</figcaption>
+              <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-center text-xs font-medium text-slate-800 dark:text-slate-200">
+                <div className="rounded-lg border border-slate-300 p-3 dark:border-white/20">FastAPI<br />Dashboard</div><span aria-label="reads and writes">↔</span><div className="rounded-lg border border-slate-300 p-3 dark:border-white/20">SQLite<br />Watches · Outbox</div>
+                <div className="rounded-lg border border-slate-300 p-3 dark:border-white/20">RSS · HTTP · Browser</div><span aria-label="source checks">↔</span><div className="rounded-lg border border-slate-300 p-3 dark:border-white/20">Worker<br />{language === "fr" ? "Planification · Matching" : "Scheduling · Matching"}</div>
+                <div className="col-span-3 py-1 text-electric dark:text-mint">Worker → Outbox → Telegram</div>
+                <div className="col-span-3 rounded-lg border border-slate-300 p-3 dark:border-white/20">Monitor → {language === "fr" ? "Santé des services · Heartbeat · Alertes" : "Service health · Heartbeat · Alerts"}</div>
+              </div>
+            </figure>
             <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700 dark:text-slate-300">{watcher.highlights.map((highlight) => <li key={highlight} className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-electric dark:bg-mint" /><span>{highlight}</span></li>)}</ul>
           </div>
         </div>
         <p className="mt-6 border-t border-slate-200 pt-5 text-sm leading-6 text-slate-500 dark:border-white/10 dark:text-slate-400">{watcher.note}</p>
+        <div className="mt-6 grid gap-3 md:grid-cols-3">{(language === "fr" ? ["Planification : un worker exécute les vérifications selon les horaires et intervalles configurés.", "Livraison : les alertes passent par une file SQLite persistante, avec déduplication et nouvelles tentatives.", "Monitoring : un service indépendant suit le heartbeat du worker, la santé des services et les erreurs des sources."] : ["Scheduling: a worker runs source checks according to configured hours and intervals.", "Delivery: alerts use a persistent SQLite outbox, with deduplication and retries.", "Monitoring: an independent service observes the worker heartbeat, service health and source failures."]).map((text) => <p key={text} className="rounded-xl border border-slate-200 p-4 text-sm leading-6 text-slate-600 dark:border-white/10 dark:text-slate-300">{text}</p>)}</div>
+        <a className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric dark:text-mint" href="https://github.com/Mednj/ps5-deal-watcher#readme" target="_blank" rel="noreferrer">{language === "fr" ? "README : installation, architecture et limites" : "README: setup, architecture and limitations"}<ExternalLink size={14} /></a>
       </article>
     </Section>
   );

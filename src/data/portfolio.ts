@@ -24,13 +24,13 @@ export const navItems = {
 export const portfolio = {
   en: {
     metaDescription:
-      "Backend and cloud software engineer with 2 years of production experience in distributed fintech systems and advanced use of generative AI for development acceleration.",
+      "Software engineer focused on cloud and distributed systems, with production experience in international banking, Java, Spring Boot and Kafka. Available for freelance work.",
     hero: {
-      badge: "M2 MIAGE in progress · Open to backend & cloud alternance",
+      badge: "Available for freelance work · France",
       eyebrow: "Software Engineer",
-      title: "Backend & Cloud Software Engineer | Fintech",
+      title: "Software Engineer · Cloud & Distributed Systems",
       tagline:
-        "I build reliable distributed backend systems and cloud-native services, using generative AI to accelerate development, debugging, testing, and documentation.",
+        "I develop Java/Spring Boot services, Kafka integrations and reliable transaction systems, with hands-on production support for international banking projects.",
       ctas: {
         experience: "View Experience",
         cv: "Download CV",
@@ -38,28 +38,17 @@ export const portfolio = {
       },
       stats: [
         ["2", "Years experience"],
-        ["4", "Banking clients"],
-        ["M2", "MIAGE Lyon 1"],
+        ["4", "Banking assignments"],
+        ["Java", "Kafka · Cloud"],
       ],
     },
     about: {
       eyebrow: "About",
-      title: "Backend and cloud engineering strengthened by advanced AI-assisted development.",
-      paragraphs: [
-        "I am a software engineer with 2 years of production experience on critical transaction systems and distributed architectures in international banking and fintech. I work with Java/Spring Boot microservices, Kafka, APIs, SQL, Kubernetes, and cloud-native delivery, from implementation and integration through production support.",
-        "I use generative AI tools extensively to accelerate software development, code analysis, debugging, testing, documentation, and technical exploration. I am currently enrolled in M2 MIAGE at Université Claude Bernard Lyon 1 for the 2026–2027 academic year and looking for a backend or cloud engineering alternance. I am also building my AWS architecture knowledge through Solutions Architect – Associate preparation.",
-      ],
-      highlights: [
-        ["Primary focus", "Backend engineering and cloud-native systems"],
-        ["Business domain", "Fintech, banking, transaction monitoring, card systems"],
-        ["AI practice", "Advanced generative AI usage for development acceleration"],
-      ],
+      title: "Software engineering grounded in production experience.",
+      paragraphs: ["At HPS, I contributed to critical payment systems for international banking clients: Java/Spring Boot services, Kafka pipelines, API integrations and production incident analysis.", "I am currently enrolled in M2 MIAGE at Université Claude Bernard Lyon 1 (2026–2027). Alongside my professional experience, I build self-hosted applications and prepare for AWS Solutions Architect – Associate.", "I use AI tools for development and investigation, with code review, testing and validation."],
+      highlights: [["Focus", "Cloud & distributed software systems"], ["Domain", "Payments, fintech & banking"], ["Collaboration", "Freelance engineering engagements"]],
       strengthsTitle: "What I bring",
-      strengths: [
-        "Production mindset: incident analysis, stabilization, non-regression testing.",
-        "Backend and cloud depth: Java/Spring Boot, Kafka, APIs, SQL, Docker, Kubernetes, and CI/CD.",
-        "AI-assisted engineering: faster coding, debugging, testing, documentation, and technical research.",
-      ],
+      strengths: ["Java/Spring Boot implementation and Kafka integrations.", "Production incident investigation, stabilization and release validation.", "Operational ownership of personal projects: deployment, monitoring and recovery."],
     },
     experienceIntro: {
       eyebrow: "Experience",
@@ -73,12 +62,7 @@ export const portfolio = {
         logo: "hsbc",
         title: "Real-Time Transaction Pipeline",
         period: "Banking monitoring and production stabilization",
-        bullets: [
-          "Built Kafka pipeline for publishing Visa and PowerCARD transactions to a banking monitoring system.",
-          "Implemented Spring Cloud Stream producers with SASL/Kerberos security.",
-          "Supported production incidents through analysis, stabilization, and reliability improvements.",
-          "Developed Python scripts to automate technical tasks and transactional data analysis.",
-        ],
+        bullets: ["Problem: publish Visa and PowerCARD transactions to a real-time bank monitoring system.", "My contribution: implemented Spring Cloud Stream producers with SASL/Kerberos and Python scripts for technical automation and data analysis.", "Result: transaction flows delivered to monitoring consumers, with incident investigation and stabilization support."],
         tags: ["Kafka", "Spring Cloud Stream", "Kerberos", "PowerCARD", "Visa"],
       },
       {
@@ -86,11 +70,7 @@ export const portfolio = {
         logo: "thales",
         title: "PowerCARD V4 Migration",
         period: "Core banking modernization and certification",
-        bullets: [
-          "Migrated Oracle PL/SQL and C legacy components to Java 17 and Spring Boot microservices.",
-          "Designed REST and gRPC APIs using Protobuf contracts for service integration.",
-          "Delivered Kafka real-time flows, Kubernetes and Helm deployments, and Visa/Mastercard certification campaigns.",
-        ],
+        bullets: ["Problem: modernize legacy Oracle PL/SQL and C components during the PowerCARD V4 migration.", "My contribution: contributed Java 17/Spring Boot microservices, REST and gRPC/Protobuf integrations, Kafka flows and Kubernetes/Helm delivery.", "Result: migrated components validated through functional and non-regression testing and Visa/Mastercard certification campaigns."],
         tags: ["Java 17", "Spring Boot", "gRPC", "Kubernetes", "Helm"],
       },
       {
@@ -98,11 +78,7 @@ export const portfolio = {
         logo: "erste",
         title: "Event-Driven PowerCARD Integration",
         period: "CDC, Kafka, testing, and production readiness",
-        bullets: [
-          "Integrated CDC events into Kafka using Avro schemas for downstream banking consumers.",
-          "Connected business consumers to real-time PowerCARD event streams.",
-          "Executed functional and non-regression testing before production release.",
-        ],
+        bullets: ["Problem: make PowerCARD change events available to downstream banking consumers.", "My contribution: integrated CDC events with Kafka/Avro and connected business consumers.", "Result: event-based integrations prepared for production through functional and non-regression validation."],
         tags: ["CDC", "Kafka", "Avro", "Oracle", "Testing"],
       },
       {
@@ -110,11 +86,7 @@ export const portfolio = {
         logo: "fnb",
         title: "FLEET Fuel Card System",
         period: "On-site production support and transaction control",
-        bullets: [
-          "Built pre-authorization transaction control rules for fuel limits, allowed fuel types, and vehicle parameters.",
-          "Contributed to Java 8 to Java 17 migration work across the payment platform.",
-          "Provided on-site production support in South Africa for critical banking operations.",
-        ],
+        bullets: ["Problem: enforce fuel-card pre-authorization rules and modernize Java applications.", "My contribution: implemented checks for spending limits, fuel types and vehicle parameters; contributed to Java 8–17 migration on JBoss.", "Result: transaction controls implemented, with on-site production support in South Africa."],
         tags: ["Java", "Rules Engine", "Payments", "Production Support", "Migration"],
       },
     ],
@@ -175,56 +147,42 @@ export const portfolio = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Let’s build reliable backend and cloud systems together.",
+      title: "Discuss a software engineering role or freelance project.",
       paragraph:
-        "Currently studying M2 MIAGE in Villeurbanne for 2026–2027, I am looking for a backend or cloud engineering alternance in France where I can contribute to distributed systems, production platforms, and teams adopting generative AI to accelerate software delivery.",
+        "Based in Villeurbanne, France, I am available for freelance software engineering work. Contact me to discuss Java services, Kafka integrations, cloud-native delivery or production reliability, as well as software engineering opportunities.",
       emailButton: "Email Me",
       cvButton: "Download CV",
       labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Phone", location: "Location" },
     },
-    footer: "Mohamed NAJA - Backend & Cloud Software Engineer | AI-Assisted Development.",
+    footer: "Mohamed NAJA · Software Engineer · Cloud & Distributed Systems",
   },
   fr: {
     metaDescription:
-      "Ingénieur logiciel backend et cloud avec 2 ans d'expérience en production sur des systèmes fintech distribués et une utilisation avancée de l'IA générative pour accélérer le développement.",
+      "Ingénieur logiciel cloud et systèmes distribués, avec une expérience production en banque internationale, Java, Spring Boot et Kafka. Disponible en freelance.",
     hero: {
-      badge: "M2 MIAGE en cours · Recherche alternance backend & cloud",
+      badge: "Disponible pour des missions freelance · France",
       eyebrow: "Ingénieur Logiciel",
-      title: "Ingénieur Logiciel Backend & Cloud | Fintech",
+      title: "Ingénieur Logiciel · Cloud & Systèmes Distribués",
       tagline:
-        "Je développe des systèmes backend distribués et des services cloud-native fiables, en utilisant l'IA générative pour accélérer le développement, le debugging, les tests et la documentation.",
+        "Je développe des services Java/Spring Boot, des intégrations Kafka et des systèmes transactionnels fiables, avec une expérience concrète du support production sur des projets bancaires internationaux.",
       ctas: {
         experience: "Voir l'expérience",
         cv: "Télécharger le CV",
         contact: "Me contacter",
       },
       stats: [
-        ["M2", "MIAGE Lyon 1"],
-        ["RNCP", "39490"],
-        ["2026–27", "Année en cours"],
+        ["2", "Ans d’expérience"],
+        ["4", "Missions bancaires"],
+        ["Java", "Kafka · Cloud"],
       ],
     },
     about: {
       eyebrow: "Profil",
-      title: "Ingénierie backend et cloud renforcée par une utilisation avancée de l'IA en développement.",
-      paragraphs: [
-        "Ingénieur logiciel avec 2 ans d'expérience en production sur des systèmes transactionnels critiques et des architectures distribuées dans la banque et la fintech internationales. J'interviens sur des microservices Java/Spring Boot, Kafka, les APIs, SQL, Kubernetes et les déploiements cloud-native, du développement jusqu'au support production.",
-        "J'utilise quotidiennement et de manière avancée les outils d'IA générative pour accélérer le développement logiciel, l'analyse de code, le debugging, les tests, la documentation et l'exploration technique. Actuellement en M2 MIAGE à l'Université Claude Bernard Lyon 1 pour l'année 2026–2027, je recherche une alternance backend ou cloud. Je développe également mes connaissances en architecture AWS dans le cadre de la préparation Solutions Architect – Associate.",
-      ],
-      highlights: [
-        ["Spécialisation", "Backend et systèmes cloud-native"],
-        ["Année en cours", "M2 MIAGE · 2026–2027"],
-        ["Rythme sept.-fév.", "2 semaines entreprise / 2 semaines formation"],
-        ["Rythme mars-juin", "3 semaines entreprise / 1 semaine formation"],
-        ["Juillet-août", "Temps plein en entreprise"],
-        ["Formation", "M2 MIAGE - RNCP39490"],
-      ],
-      strengthsTitle: "Ce que j'apporte",
-      strengths: [
-        "Culture production : analyse d'incidents, stabilisation, tests de non-régression.",
-        "Expertise backend et cloud : Java/Spring Boot, Kafka, APIs, SQL, Docker, Kubernetes et CI/CD.",
-        "Développement assisté par IA : accélération du code, debugging, tests, documentation et recherche technique.",
-      ],
+      title: "Une pratique du logiciel ancrée dans la production.",
+      paragraphs: ["Chez HPS, j’ai contribué à des systèmes de paiement critiques pour des clients bancaires internationaux : services Java/Spring Boot, pipelines Kafka, intégrations API et analyse d’incidents de production.", "Je suis actuellement en M2 MIAGE à l’Université Claude Bernard Lyon 1 (2026–2027). En parallèle de mon expérience professionnelle, je développe des applications auto-hébergées et prépare AWS Solutions Architect – Associate.", "J’utilise des outils d’IA pour le développement et l’investigation, avec revue de code, tests et validation."],
+      highlights: [["Spécialisation", "Logiciel cloud et systèmes distribués"], ["Domaine", "Paiements, fintech et banque"], ["Collaboration", "Missions d’ingénierie en freelance"]],
+      strengthsTitle: "Ce que j’apporte",
+      strengths: ["Développement Java/Spring Boot et intégrations Kafka.", "Investigation d’incidents, stabilisation et validation des mises en production.", "Exploitation des projets personnels : déploiement, monitoring et restauration."],
     },
     experienceIntro: {
       eyebrow: "Expérience",
@@ -238,12 +196,7 @@ export const portfolio = {
         logo: "hsbc",
         title: "Pipeline de transactions temps réel",
         period: "Monitoring bancaire et stabilisation production",
-        bullets: [
-          "Développement d'un pipeline Kafka pour publier les transactions Visa et PowerCARD vers un système de monitoring bancaire.",
-          "Mise en place de producteurs Spring Cloud Stream avec sécurité SASL/Kerberos.",
-          "Support production, analyse d'incidents, stabilisation et amélioration de la fiabilité.",
-          "Développement de scripts Python pour automatiser des tâches techniques et analyser les données transactionnelles.",
-        ],
+        bullets: ["Contexte : publier les transactions Visa et PowerCARD vers le monitoring bancaire en temps réel.", "Ma contribution : producteurs Spring Cloud Stream sécurisés par SASL/Kerberos et scripts Python pour l’automatisation technique et l’analyse de données.", "Résultat : flux transactionnels livrés aux consommateurs de monitoring, avec investigation et stabilisation des incidents."],
         tags: ["Kafka", "Spring Cloud Stream", "Kerberos", "PowerCARD", "Visa"],
       },
       {
@@ -251,11 +204,7 @@ export const portfolio = {
         logo: "thales",
         title: "Migration PowerCARD V4",
         period: "Modernisation core banking et certification",
-        bullets: [
-          "Migration de composants legacy Oracle PL/SQL et C vers des microservices Java 17 et Spring Boot.",
-          "Conception d'API REST et gRPC avec contrats Protobuf pour l'intégration inter-services.",
-          "Livraison de flux Kafka temps réel, déploiements Kubernetes/Helm et campagnes de certification Visa/Mastercard.",
-        ],
+        bullets: ["Contexte : moderniser des composants Oracle PL/SQL et C dans la migration PowerCARD V4.", "Ma contribution : microservices Java 17/Spring Boot, intégrations REST et gRPC/Protobuf, flux Kafka et livraison Kubernetes/Helm.", "Résultat : composants migrés validés par la recette, les tests de non-régression et les campagnes de certification Visa/Mastercard."],
         tags: ["Java 17", "Spring Boot", "gRPC", "Kubernetes", "Helm"],
       },
       {
@@ -263,11 +212,7 @@ export const portfolio = {
         logo: "erste",
         title: "Intégration PowerCARD événementielle",
         period: "CDC, Kafka, tests et préparation production",
-        bullets: [
-          "Intégration d'événements CDC vers Kafka avec des schémas Avro pour les consommateurs bancaires.",
-          "Connexion de consommateurs métier aux flux PowerCARD en temps réel.",
-          "Tests fonctionnels et de non-régression avant mise en production.",
-        ],
+        bullets: ["Contexte : fournir les événements de changement PowerCARD aux consommateurs bancaires.", "Ma contribution : intégration CDC vers Kafka/Avro et raccordement des consommateurs métier.", "Résultat : intégrations événementielles préparées pour la production par les validations fonctionnelles et de non-régression."],
         tags: ["CDC", "Kafka", "Avro", "Oracle", "Tests"],
       },
       {
@@ -275,11 +220,7 @@ export const portfolio = {
         logo: "fnb",
         title: "Système FLEET de cartes carburant",
         period: "Support production sur site et contrôle transactionnel",
-        bullets: [
-          "Développement d'un module de contrôle de pré-autorisation pour les limites carburant, types autorisés et paramètres véhicule.",
-          "Contribution à la migration Java 8 vers Java 17 sur la plateforme de paiement.",
-          "Support production sur site en Afrique du Sud pour des opérations bancaires critiques.",
-        ],
+        bullets: ["Contexte : contrôler les pré-autorisations des cartes carburant et moderniser les applications Java.", "Ma contribution : règles de plafonds, carburants et paramètres véhicule ; participation à la migration Java 8–17 sur JBoss.", "Résultat : contrôles transactionnels implémentés et support production sur site en Afrique du Sud."],
         tags: ["Java", "Moteur de règles", "Paiements", "Support production", "Migration"],
       },
     ],
@@ -289,7 +230,7 @@ export const portfolio = {
     },
     educationIntro: {
       eyebrow: "Formation",
-      title: "Formation alignée avec l'alternance et le marché français.",
+      title: "Formation en informatique et systèmes d’information.",
     },
     certificationsIntro: {
       eyebrow: "Certifications",
@@ -300,7 +241,7 @@ export const portfolio = {
     },
     projects: {
       eyebrow: "Projets",
-      title: "Projets personnels avec architecture orientee production.",
+      title: "Projets personnels : architecture et exploitation.",
       intro:
         "Un espace dédié aux projets qui démontrent l'architecture, le debugging, l'observabilité et la capacité à construire un système de bout en bout.",
       featured: "Projet réalisé",
@@ -340,14 +281,14 @@ export const portfolio = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Construisons des systèmes backend et cloud fiables.",
+      title: "Échangeons sur un poste ou une mission freelance.",
       paragraph:
-        "Basé à Villeurbanne et actuellement en M2 MIAGE à l'Université Claude Bernard Lyon 1 (2026–2027, RNCP39490), je recherche une alternance backend ou cloud en France. Je souhaite contribuer à des systèmes distribués et des plateformes de production, au sein d'équipes qui exploitent aussi l'IA générative pour accélérer le développement logiciel. Rythme de la formation : 2 semaines entreprise / 2 semaines formation de septembre à février, 3 semaines entreprise / 1 semaine formation de mars à juin, puis temps plein en entreprise en juillet-août.",
+        "Basé à Villeurbanne, je suis disponible pour des missions freelance en ingénierie logicielle. Contactez-moi pour des services Java, des intégrations Kafka, des déploiements cloud-native ou la fiabilité en production, ainsi que pour des opportunités de poste en ingénierie logicielle.",
       emailButton: "M'écrire",
       cvButton: "Télécharger le CV",
       labels: { email: "Email", linkedin: "LinkedIn", phoneFr: "Téléphone", location: "Localisation" },
     },
-    footer: "Mohamed NAJA - Ingénieur Logiciel Backend & Cloud | Développement assisté par IA.",
+    footer: "Mohamed NAJA · Ingénieur Logiciel · Cloud & Systèmes Distribués",
   },
 };
 
@@ -362,7 +303,7 @@ export const skills = [
   },
   {
     group: "Cloud & Delivery",
-    items: ["AWS", "Docker", "Kubernetes", "OpenShift", "Helm", "Jenkins", "GitHub Actions", "CI/CD", "Git", "Bitbucket"],
+    items: ["Docker", "Kubernetes", "OpenShift", "Helm", "Jenkins", "CI/CD", "Git", "Bitbucket"],
   },
   {
     group: "Quality & Practices",
@@ -498,4 +439,17 @@ export const dealWatcher = {
     repoLabel: "Explorer le code source",
     flow: ["Vérifications planifiées", "Filtrage par budget", "File persistante", "Alertes Telegram"],
   },
+};
+
+export const cloudPractice = {
+  en: [
+    {title: "Professional delivery", description: "Kubernetes and Helm delivery on banking assignments at HPS, with functional validation and production support."},
+    {title: "Personal projects", description: "Docker Compose and GitHub Actions delivery on a self-hosted runner for PS5 Deals Watcher, with health checks and backup procedures."},
+    {title: "AWS learning", description: "Solutions Architect – Associate preparation in progress. Focus: access control, networking, availability and cost-aware architecture."},
+  ],
+  fr: [
+    {title: "Pratique professionnelle", description: "Livraison Kubernetes et Helm sur des missions bancaires chez HPS, avec validation fonctionnelle et support production."},
+    {title: "Projets personnels", description: "Docker Compose et GitHub Actions sur un runner auto-hébergé pour PS5 Deals Watcher, avec health checks et procédures de sauvegarde."},
+    {title: "Apprentissage AWS", description: "Préparation Solutions Architect – Associate en cours : contrôle des accès, réseau, disponibilité et architecture attentive aux coûts."},
+  ],
 };
